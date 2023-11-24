@@ -21,7 +21,8 @@ function validateContactInfo(contactInfo) {
       return false;
     }
 
-    // Call validateEmail()
-    validateEmail(email)
+    // Validate Email
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
   }
 export { validateEmail, validateContactInfo };
