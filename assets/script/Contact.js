@@ -22,7 +22,7 @@ class Contact {
 
     render() {
         const contactDiv = document.createElement('div');
-        contactDiv.classList.add('shape-grid', 'contact-item'); // Add the shape-grid and contact-item classes
+        contactDiv.classList.add('shape-grid', 'contact-item');
         contactDiv.innerHTML = `
             <p>Name: ${this.name}</p>
             <p>City: ${this.city}</p>
