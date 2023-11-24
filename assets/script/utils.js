@@ -22,6 +22,6 @@ function validateContactInfo(contactInfo) {
     }
 
     // Call validateEmail()
-    validateEmail(email)
+    validateEmail(email);
   }
 export { validateEmail, validateContactInfo };
