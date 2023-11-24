@@ -20,8 +20,7 @@ function validateContactInfo(contactInfo) {
     if (name.length === 0 || city.length === 0 || email.length === 0) {
       return false;
     }
-
-    // Validate Email
+    
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return emailRegex.test(email);
   }
