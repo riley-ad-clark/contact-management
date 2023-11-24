@@ -1,6 +1,8 @@
 @charset "utf-8";
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -32,52 +34,75 @@ html {
   font-size: 62.5%;
   scroll-behavior: smooth;
   -webkit-text-size-adjust: none;
-     -moz-text-size-adjust: none;
-          text-size-adjust: none;
+  -moz-text-size-adjust: none;
+  text-size-adjust: none;
 }
 
 body {
   min-height: 100dvh;
   font-family: 'Poppins', "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
   font-size: 1.6rem;
-  line-height: 1.5; 
+  line-height: 1.5;
   text-rendering: optimizeSpeed;
   -webkit-font-smoothing: antialiased;
-   -moz-osx-font-smoothing: grayscale;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
   text-wrap: balance;
 }
 
-p, h1, h2, h3, h4 {
+p,
+h1,
+h2,
+h3,
+h4 {
   overflow-wrap: break-word;
 }
 
-ul[role=list], ol[role=list]  {
+ul[role=list],
+ol[role=list] {
   list-style: none;
 }
 
-a, i, figure, img, button,
-input[type=button], input[type=submit] {
+a,
+i,
+figure,
+img,
+button,
+input[type=button],
+input[type=submit] {
   -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
+  -moz-user-select: none;
+  user-select: none;
 }
 
-img, picture, video, canvas, svg {
+img,
+picture,
+video,
+canvas,
+svg {
   display: block;
   max-width: 100%;
 }
 
-input, textarea, button, select {
+input,
+textarea,
+button,
+select {
   font: inherit;
   border-style: none;
   outline-style: none;
 }
 
-input[type=button], input[type=submit],
-input[type=reset], button, a {
+input[type=button],
+input[type=submit],
+input[type=reset],
+button,
+a {
   cursor: pointer;
 }
 
@@ -86,7 +111,9 @@ input[type=reset], button, a {
     scroll-behavior: auto;
   }
 
-  *, *::before, *::after {
+  *,
+  *::before,
+  *::after {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
