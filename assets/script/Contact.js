@@ -22,11 +22,13 @@ class Contact {
 
     render() {
         const contactDiv = document.createElement('div');
-        contactDiv.classList.add('shape-grid', 'contact-item'); // Add the shape-grid and contact-item classes
+        contactDiv.classList.add('contact-grid', 'contact-item');
         contactDiv.innerHTML = `
-            <p>Name: ${this.name}</p>
-            <p>City: ${this.city}</p>
-            <p>Email: ${this.email}</p>
+            <div class="contact-box">
+                <p>Name: ${this.name}</p>
+                <p>City: ${this.city}</p>
+                <p>Email: ${this.email}</p>
+            </div>
         `;
         contactDiv.addEventListener('click', () => {
             if (this._onDelete) {
