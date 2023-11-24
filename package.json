@@ -1,0 +1,14 @@
+{
+  "name": "contact-management",
+  "version": "1.0.0",
+  "description": "<a href=\"https://raw.githack.com/riley-ad-clark/contact-management/main/index.html\">Click here</a> to visit the demo site for this project!",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "package": "^1.0.1"
+  }
+}
