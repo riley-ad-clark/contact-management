@@ -14,3 +14,4 @@ function validateContactInfo(contactInfo) {
 }
 
 export { validateEmail, validateContactInfo };
+
