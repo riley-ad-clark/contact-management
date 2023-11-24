@@ -4,6 +4,8 @@
   --col-main-darker-blue: #1f73a3;
   --col-main-dark-blue: #102937;
   --col-main-darkest-blue: #206996;
+  --col-error-red: #c90d0d;
+  --col-confirm-green: #30bd42;
   --col-main-navy: #11131a;
   --col-main-navy-dark: #0e1016;
   --col-white: #eeecec;
@@ -31,11 +33,11 @@
 
 @keyframes pulsing {
   from {
-    color: white;
+    color: #eeecec;
   }
 
   to {
-    color: rgb(216, 68, 68);
+    color: #c90d0d;
   }
 }
 

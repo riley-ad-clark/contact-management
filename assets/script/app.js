@@ -6,8 +6,12 @@ import { validateEmail, validateContactInfo } from "./utils.js";
 document.addEventListener("DOMContentLoaded", () => {
   const contactForm = document.querySelector(".contact-form");
   const contactsGrid = document.querySelector(".contacts-grid");
-  const contactCount = document.querySelector(".contact-count p");
+  const contactCount = document.querySelector(".contact-count");
   const addContactButton = document.querySelector(".contact-form button");
+  const input = document.querySelector('input');
+
+  input.style.border = '2px solid transparent';
+  contactCount.style.border = '2px solid transparent' ;
 
   const contacts = [];
 
@@ -28,21 +32,43 @@ document.addEventListener("DOMContentLoaded", () => {
       .split(",")
       .map((info) => info.trim());
 
-    if (!(validateContactInfo(contactInfo) && validateEmail(email))) {
-      alert(
-        "Invalid contact information. Please provide a valid Name, City, and Email separated by commas."
-      );
-      return;
-    }
-
-    const newContact = new Contact(name, city, email, onDeleteContact);
-    contacts.unshift(newContact);
-    listContacts();
+      if (!(validateContactInfo(contactInfo) && validateEmail(email))) {
+        input.style.border = '2px solid var(--col-error-red)';
+        input.style.transition = '0.3s ease-in-out'
+        setTimeout(() => {
+          input.style.border = '2px solid transparent';
+          input.style.transition = '0.3s ease-in-out'
+        }, 500);
+    
+        return;
+      } else {
+          input.style.border = '2px solid var(--col-confirm-green)';
+          input.style.transition = '0.3s ease-in-out'
+          setTimeout(() => {
+          input.style.border = '2px solid transparent';
+          input.style.transition = '0.3s ease-in-out'
+          }, 500);
+          contactCount.style.border = '2px solid var(--col-confirm-green)'
+          contactCount.style.transition = '0.3s ease-in-out'
+          setTimeout(() => {
+            contactCount.style.border = '2px solid transparent';
+            contactCount.style.transition = '0.3s ease-in-out'
+          }, 500);
+          const newContact = new Contact(name, city, email, onDeleteContact);
+          contacts.unshift(newContact);
+          listContacts();
+      }
   }
 
   function onDeleteContact(contact) {
     const index = contacts.indexOf(contact);
     if (index !== -1) {
+      contactCount.style.border = '2px solid var(--col-error-red)'
+      contactCount.style.transition = '0.3s ease-in-out'
+      setTimeout(() => {
+          contactCount.style.border = '2px solid transparent';
+          contactCount.style.transition = '0.3s ease-in-out'
+      }, 500);
       contacts.splice(index, 1);
       listContacts();
     }
